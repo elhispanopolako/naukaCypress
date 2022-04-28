@@ -1,4 +1,4 @@
 {
-  "chromeWebSecurity": false
-
+  "chromeWebSecurity": false,
+  "retries": 1
 }
