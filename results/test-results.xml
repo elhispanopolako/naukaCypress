@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="38.5430" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2022-07-11T14:18:21" tests="0" file="cypress\e2e\demoQA\practiceForm.cy.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Testing a practice form" timestamp="2022-07-11T14:18:21" tests="2" time="38.5430" failures="0">
+    <testcase name="Testing a practice form should refill all form" time="19.4520" classname="should refill all form">
+    </testcase>
+    <testcase name="Testing a practice form should refill a form with PO" time="19.0910" classname="should refill a form with PO">
+    </testcase>
+  </testsuite>
+</testsuites>

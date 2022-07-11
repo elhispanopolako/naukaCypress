@@ -22,12 +22,12 @@ class demoqaPO {
     setPhone(phone) {
         cy.get(practiceForm.phone).type(phone);
     }
-    setBirthDay() {
+    setBirthDay(year, month, day) {
         cy.get(practiceForm.birthdayInput).click();
-        cy.get(practiceForm.yearInput).select('1998');
-        cy.get(practiceForm.monthInput).select('April');
-        cy.get(practiceForm.dayInput + '22').click();
-        cy.get(practiceForm.birthdayInput).should('have.value', '22 Apr 1998');
+        cy.get(practiceForm.yearInput).select(year);
+        cy.get(practiceForm.monthInput).select(month);
+        cy.get(practiceForm.dayInput + day).click();
+        cy.get(practiceForm.birthdayInput).should('have.value', day + ' Apr ' + year);
     }
     setSubject(subject) {
         cy.get(practiceForm.subject).type(subject + '{enter}')
@@ -47,9 +47,10 @@ class demoqaPO {
 
     }
     attachFile(file) {
-        cy.get(practiceForm.uploader).attachFile(file);
+        cy.get(practiceForm.uploader).attachFile(file)
     }
     typeCurrentAddress(address) {
         cy.get(practiceForm.address).type(address, { delay: 0 });
+
     }
 } export default demoqaPO;
