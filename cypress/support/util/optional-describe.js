@@ -1,0 +1,1 @@
+export const optionalDescribe = (key) => Cypress.env(key) ? describe : describe.skip;

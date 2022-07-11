@@ -1,0 +1,8 @@
+{
+    "baseUrl": "https://www.saucedemo.com/",
+    "env": {
+        "swapi.form": false,
+        "demoqa.form": false,
+        "swaglab.form": true
+    }
+}

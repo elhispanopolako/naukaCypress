@@ -1,0 +1,7 @@
+{
+    "baseUrl": "https://demoqa.com/",
+    "env": {
+        "swapi.form": false,
+        "demoqa.form": true
+    }
+}
