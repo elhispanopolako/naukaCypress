@@ -1,5 +1,0 @@
-{"baseUrl": "https://swapi.dev/api/",
-  "env": {
-    "swapi.form": true
-  }
-}

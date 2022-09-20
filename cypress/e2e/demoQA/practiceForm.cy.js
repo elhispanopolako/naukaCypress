@@ -1,7 +1,7 @@
 ///<reference types="Cypress"/>
 import demoqaPO from '../../support/PageObjects/demoqa/demoqaPO';
 
-const url = "https://demoqa.com/automation-practice-form";
+const url = Cypress.env("demoQA") + "/automation-practice-form";
 const page = new demoqaPO;
 let data;
 describe('Testing a practice form', () => {
@@ -57,5 +57,4 @@ describe('Testing a practice form', () => {
         page.attachFile('Sports.jpg')
         page.typeCurrentAddress(data.user.address)
     })
-
 })
