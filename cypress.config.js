@@ -67,6 +67,9 @@ module.exports = defineConfig({
     demoQA: "https://demoqa.com",
     theInternet: "https://the-internet.herokuapp.com",
     saucedemo: "https://www.saucedemo.com/",
+    palindromUrl: "https://bartekkustra.github.io/luczniczqa/task-1/",
+    google: "https://www.google.com",
+    solidJobs: "https://solid.jobs/offers/it",
     //https://www.globalsqa.com/angularjs-protractor-practice-site/
     Angular: "https://www.globalsqa.com",
     db: {

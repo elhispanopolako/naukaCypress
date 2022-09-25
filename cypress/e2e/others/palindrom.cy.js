@@ -1,5 +1,5 @@
 ///<reference types="Cypress"/>
-const url = "https://bartekkustra.github.io/luczniczqa/task-1/"
+const url = Cypress.env('palindromUrl');
 const typePalindrom = (text) => {
     cy
         .get('#input')
@@ -21,21 +21,21 @@ const shouldPass = (decision = true) => {
     }
 }
 const assertWords = (word, backwards) => {
-    cy.get('#output > :nth-child(1)').should('have.text',word)
-    cy.get('#output > :nth-child(2)').should('have.text',backwards)
+    cy.get('#output > :nth-child(1)').should('have.text', word)
+    cy.get('#output > :nth-child(2)').should('have.text', backwards)
 }
 
 
 
 describe('Testujemy palindrom 2000', () => {
-  
+
     context('uruchomienie strony', () => {
         it('should open the page', () => {
             cy.visit(url);
         })
         it('should contain default heading and description', () => {
             cy.get('h3').should('have.text', 'Palindrom 2000')
-            cy.get('p').should('contain','This awesome script')
+            cy.get('p').should('contain', 'This awesome script')
         })
     })
 
@@ -46,28 +46,28 @@ describe('Testujemy palindrom 2000', () => {
                 .clear();
         })
         it('kayak :: ok', () => {
-         typePalindrom('kayak')
-        
+            typePalindrom('kayak')
+
             cy
                 .get('#output')
                 .should('contain', 'Tak');
-        
+
         })
         it('something :: nope', () => {
             typePalindrom('something')
-        
+
             cy
                 .get('#output')
                 .should('contain', 'Nie');
-        
+
         })
         it('Kayak :: nope', () => {
-          typePalindrom('Kayak')
-        
+            typePalindrom('Kayak')
+
             cy
                 .get('#output')
                 .should('contain', 'Tak');
-        
+
         })
     })
     const words = [
@@ -80,7 +80,7 @@ describe('Testujemy palindrom 2000', () => {
             it(`should pass with word: "${item.word}"`, () => {
                 typePalindrom(item.word)
                 shouldPass(item.shouldPass)
-                assertWords(item.word,item.back)
+                assertWords(item.word, item.back)
             })
         })
 
