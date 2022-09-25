@@ -2,14 +2,20 @@
     "name": "nauka-cypress-e2e",
     "scripts": {
         "start": "npx cypress open",
-        "start:swapi": "npx cypress open --env env=swapi",
-        "start:demoqa": "npx cypress open --env env=demoQA",
-        "start:swaglab": "npx cypress open --env env=swaglab",
         "report": "npx cypress run --spec \"cypress/e2e/demoQA/**\" --reporter junit"
     },
     "devDependencies": {
+        "cy-verify-downloads": "^0.1.10",
         "cypress": "^10.3.0",
         "cypress-multi-reporters": "^1.6.1",
-        "mocha-junit-reporter": "^2.0.2"
+        "faker": "^6.6.6",
+        "mocha-junit-reporter": "^2.0.2",
+        "mysql": "^2.18.1"
+    },
+    "dependencies": {
+        "@faker-js/faker": "^7.5.0",
+        "fs": "^0.0.1-security",
+        "node-xlsx": "^0.21.0",
+        "path": "^0.12.7"
     }
 }

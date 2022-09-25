@@ -1,5 +1,5 @@
 ///<reference types="Cypress"/>
-const url = "https://solid.jobs/offers/it"
+const url = Cypress.env('solidJobs');
 const getEmployerSection = (section) => {
     cy.get('#employer-id').click()
     cy.contains(section).click()
