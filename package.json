@@ -2,9 +2,14 @@
     "name": "nauka-cypress-e2e",
     "scripts": {
         "start": "npx cypress open",
-        "report": "npx cypress run --spec \"cypress/e2e/demoQA/**\" --reporter junit"
+        "reportJunit": "npx cypress run --spec \"cypress/e2e/demoQA/**\" --reporter junit",
+        "runTestAllure": "npx cypress run --spec \"cypress/e2e/demoQA/**\" --env allure=true",
+        "allure:report": "allure generate allure-results --clean -o allure-report",
+        "allure:clear": "rm -r allure-results/ allure-report cypress/screenshots || true",
+        "allure:history": "mv -f allure-report/history allure-results/history && rm -r allure-report || true"
     },
     "devDependencies": {
+        "@shelex/cypress-allure-plugin": "^2.33.1",
         "cy-verify-downloads": "^0.1.10",
         "cypress": "^10.3.0",
         "cypress-multi-reporters": "^1.6.1",

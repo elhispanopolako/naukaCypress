@@ -10,6 +10,8 @@ const path = require("path"); // for file path
 const mysql = require("mysql");
 //Faker
 const { faker } = require("@faker-js/faker");
+//allure
+const allureWriter = require('@shelex/cypress-allure-plugin/writer');
 
 module.exports = defineConfig({
   e2e: {
@@ -58,6 +60,8 @@ module.exports = defineConfig({
           return user;
         },
       });
+      allureWriter(on, config);
+      return config;
       //--------
     },
 
